@@ -6,7 +6,7 @@ import {
   updateCoreMember,
   deleteCoreMember,
 } from "../controllers/coreMemberController.js";
-import { authenticate, requireRole } from "../middlewares/auth.js";
+import { authenticate, requireRole } from "../MiddleWares/auth.js";
 
 const router = express.Router();
 

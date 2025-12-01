@@ -10,7 +10,7 @@ import {
   createRegistration,
   getRegistrationsForEvent,
 } from "../controllers/registrationController.js";
-import { authenticate, requireRole } from "../middlewares/auth.js";
+import { authenticate, requireRole } from "../MiddleWares/auth.js";
 
 const router = express.Router();
 

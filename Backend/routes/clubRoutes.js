@@ -1,6 +1,6 @@
 import express from "express";
 import { getAllClubs, getClubById, addClub } from "../controllers/clubController.js";
-import { authenticate, requireRole } from "../middlewares/auth.js";
+import { authenticate, requireRole } from "../MiddleWares/auth.js";
 
 const router = express.Router();
 
