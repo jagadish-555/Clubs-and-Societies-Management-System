@@ -124,7 +124,6 @@ export const changePassword = async (req, res) => {
       data: { password: hash, refreshTokenHash: null },
     });
 
-    // clear any active refresh tokens so other sessions must re-login
     res.json({ message: "Password changed successfully" });
   } catch (err) {
     console.error(err);

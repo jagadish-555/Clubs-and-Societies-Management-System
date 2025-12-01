@@ -12,15 +12,14 @@ import userRoutes from "./routes/userRoutes.js";
 const app = express();
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
     
     const allowedOrigins = [
       'http://localhost:5173',
       'http://localhost:5174',
-      'https://clubs-and-societies-management-system-l87in25nt.vercel.app', // Your specific Vercel URL
-      /^https:\/\/.*\.vercel\.app$/,  // Allow all Vercel apps
-      /^https:\/\/.*\.netlify\.app$/, // Allow all Netlify apps
+      'https://clubs-and-societies-management-system-l87in25nt.vercel.app',
+      /^https:\/\/.*\.vercel\.app$/,
+      /^https:\/\/.*\.netlify\.app$/,
     ];
     
     const isAllowed = allowedOrigins.some(pattern => {
@@ -51,7 +50,6 @@ app.use("/api", authRoutes);
 app.use("/api", galleryRoutes);
 app.use("/api", userRoutes);
 
-// Add basic health check endpoint
 app.get("/health", (req, res) => {
   res.status(200).json({ 
     status: "OK", 
@@ -61,13 +59,11 @@ app.get("/health", (req, res) => {
   });
 });
 
-// Error handling middleware
 app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ error: "Internal server error" });
 });
 
-// Handle uncaught exceptions
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);
   process.exit(1);

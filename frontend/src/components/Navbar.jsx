@@ -75,7 +75,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 m-5 mr-7 ml-7 bg-[#F6EFE6] shadow-md rounded-lg">
       <div className="max-w-[1400px] mx-auto px-12 py-4 flex items-center">
-        {/* Logo Section - Left */}
         <div className="flex items-center gap-3 flex-1">
           <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-[#b8894a]">
             <img
@@ -89,7 +88,6 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Navigation Section - Center */}
         <ul className="hidden lg:flex items-center gap-10 list-none flex-1 justify-center">
           <li>
             <a
@@ -147,7 +145,6 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* Login Section - Right */}
         <div className="flex items-center gap-4 flex-1 justify-end">
           {isLoggedIn ? (
             <button
