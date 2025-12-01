@@ -50,7 +50,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:3001/api/auth/logout", {
+      await fetch("https://clubs-and-societies-management-system.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include",
       });

@@ -27,7 +27,7 @@ export default function Login() {
     let mounted = true;
     const fetchClubs = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/clubs");
+        const res = await fetch("https://clubs-and-societies-management-system.onrender.com/api/clubs");
         if (!res.ok) throw new Error("Failed to fetch clubs");
         const data = await res.json();
         if (mounted && Array.isArray(data) && data.length) {
@@ -102,7 +102,7 @@ export default function Login() {
     setError("");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3001/api/auth/login", {
+      const res = await fetch("https://clubs-and-societies-management-system.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -325,7 +325,7 @@ export default function Login() {
                       newPassword: cpNew,
                     };
                     const res = await fetch(
-                      "http://localhost:3001/api/auth/change-password",
+                      "https://clubs-and-societies-management-system.onrender.com/api/auth/change-password",
                       {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },

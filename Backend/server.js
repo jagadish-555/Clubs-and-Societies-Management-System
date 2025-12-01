@@ -10,11 +10,16 @@ import authRoutes from "./routes/authRoutes.js";
 import galleryRoutes from "./routes/gelleryRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 const app = express();
-app.use(cors(
-  {
-  origin: 'http://localhost:5173', 
-  credentials: true}
-));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174', 
+    'https://clubs-and-societies-management-system-frontend.vercel.app',
+    'https://clubs-and-societies-management-system-frontend.netlify.app',
+    // Add your actual frontend deployment URL here when you get it
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser());
 

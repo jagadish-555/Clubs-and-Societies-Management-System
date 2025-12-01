@@ -17,7 +17,7 @@ export default function Clubs() {
 
     const fetchClubs = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/clubs");
+        const res = await fetch("https://clubs-and-societies-management-system.onrender.com/api/clubs");
         if (!res.ok) throw new Error("Failed to fetch clubs");
         const data = await res.json();
         console.log("Fetched clubs from backend:", data);

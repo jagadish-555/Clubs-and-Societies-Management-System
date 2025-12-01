@@ -17,7 +17,7 @@ export default function ClubDetail() {
     let mounted = true;
     const fetchClub = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/api/clubs/${id}`);
+        const res = await fetch(`https://clubs-and-societies-management-system.onrender.com/api/clubs/${id}`);
         if (!res.ok) throw new Error("Failed to fetch club");
         const data = await res.json();
         if (mounted) setClub(data);
