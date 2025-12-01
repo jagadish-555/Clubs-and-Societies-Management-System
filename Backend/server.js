@@ -18,6 +18,7 @@ app.use(cors({
     const allowedOrigins = [
       'http://localhost:5173',
       'http://localhost:5174',
+      'https://clubs-and-societies-management-system-l87in25nt.vercel.app', // Your specific Vercel URL
       /^https:\/\/.*\.vercel\.app$/,  // Allow all Vercel apps
       /^https:\/\/.*\.netlify\.app$/, // Allow all Netlify apps
     ];
